@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Math Flight</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+  <header class="topbar">
+    <h1 class="game-title">Math Flight</h1>
+    <div class="controls row-center">
+<label class="control-item">조작:
+        <select id="controlMode" tabindex="-1">
+          <option value="keyboard">키보드(← →)</option>
+          <option value="mouse">마우스(좌우 이동)</option>
+        </select>
+      </label>
+      <button id="btnRestart" class="control-item" tabindex="-1">재시작</button>
+    </div>
+    <div class="scorebar"><div id="hiscore" class="hiscore">최고 점수: 0</div><div id="currentscore" class="currentscore">현재 점수: 0</div></div>
+  </header>
+
+  <main>
+    <div id="uiOverlay">
+      
+      <div class="panel">
+        <h2>게임 방법</h2>
+        <ul>
+          <li><b>이동</b>: 키보드(←→↑↓ / WASD) 또는 마우스.</li>
+          <li><b>일시정지/재개</b>: 스페이스바( Space ).</li>
+          <li><b>게이트</b>: 파란(+/×)은 버프, 빨간(-/÷)은 디버프. 닿으면 <b>HP</b> 변화.</li>
+          <li><b>실패</b>: 몬스터가 하단 방어선을 <b>완전히</b> 넘거나, HP가 0.</li>
+        </ul>
+        <button id="btnStart" tabindex="-1">시작하기</button>
+      </div>
+
+    </div>
+
+    <canvas id="game" width="900" height="600" aria-label="게임 캔버스" tabindex="0">></canvas>
+    <div class="footer">
+      <span>© 2025 PC Web Demo • Made for 근우님</span>
+    </div>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
